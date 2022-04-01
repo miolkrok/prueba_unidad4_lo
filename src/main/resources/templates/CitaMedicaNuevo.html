@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+</head>
+
+<body>
+	<form th:action="@{/citasmedicas/insertar}" th:object="${citaMedica}" method="POST" >
+		<table>
+			<tr>
+				<td>
+					<label>Numero:</label>
+				</td>
+				<td>
+					<input type="text" id="numero" th:field="*{numero}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Fecha Cita:</label>
+				</td>
+				<td>
+					<input type="text" id="fechaCita" th:field="*{fechaCita}">
+				</td>
+			</tr>
+						<tr>
+				<td>
+					<label>Valor Cita:</label>
+				</td>
+				<td>
+					<input type="text" id="valorCita" th:field="*{valorCita}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Lugar Cita:</label>
+				</td>
+				<td>
+					<input type="text" id="lugarCita" th:field="*{lugarCita}">
+				</td>
+			</tr>
+						<tr>
+				<td>
+					<label>Cedula Doctor:</label>
+				</td>
+				<td>
+					<input type="text" id="cedulaDoctor" th:field="*{cedulaDoctor}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Cedula Paciente:</label>
+				</td>
+				<td>
+					<input type="text" id="cedulaPaciente" th:field="*{cedulaPaciente}">
+				</td>
+			</tr>
+		</table>
+		<input type="submit" value="Guardar">
+	</form>
+</body>
+
+</html>
